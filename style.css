@@ -1,360 +1,544 @@
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+/* ================================
+   HB DIGITAL GROWTH
+   PREMIUM PROFESSIONAL DESIGN
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:#f5f7fb;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
   background:
-    radial-gradient(circle at 15% 20%,rgba(40,220,170,.12),transparent 25%),
-    radial-gradient(circle at 85% 70%,rgba(0,150,255,.10),transparent 30%),
-    linear-gradient(135deg,#050b16,#081525 50%,#06101d);
-  line-height:1.7;
-  overflow-x:hidden;
+    radial-gradient(circle at 10% 15%, rgba(42, 226, 169, 0.12), transparent 25%),
+    radial-gradient(circle at 90% 35%, rgba(0, 145, 255, 0.10), transparent 28%),
+    radial-gradient(circle at 50% 90%, rgba(42, 226, 169, 0.08), transparent 30%),
+    #050c18;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Professional background pattern */
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.18;
+/* Premium digital background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
   background-image:
-    linear-gradient(rgba(80,230,190,.08) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(80,230,190,.08) 1px,transparent 1px);
-  background-size:45px 45px;
-  mask-image:linear-gradient(to bottom,black,transparent);
+    linear-gradient(rgba(95, 240, 189, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 240, 189, 0.035) 1px, transparent 1px);
+  background-size: 55px 55px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
 }
 
-/* Header */
-header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:18px 7%;
-  background:rgba(5,12,24,.88);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid rgba(90,230,190,.18);
+/* Soft glowing background */
+body::after {
+  content: "";
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  top: 35%;
+  right: -250px;
+  border-radius: 50%;
+  background: rgba(45, 235, 175, 0.08);
+  filter: blur(100px);
+  pointer-events: none;
 }
 
-/* HB Logo */
-.logo{
-  position:relative;
-  color:#5ff0bd;
-  font-size:34px;
-  font-weight:900;
-  letter-spacing:-2px;
-  text-shadow:0 0 20px rgba(80,240,190,.35);
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 7%;
+  background: rgba(4, 11, 23, 0.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(95, 240, 189, 0.15);
 }
 
-.logo:after{
-  content:"↗";
-  position:absolute;
-  right:-13px;
-  top:-10px;
-  font-size:17px;
-  color:#fff;
+/* Stylish HB */
+.logo {
+  position: relative;
+  color: #5ff0bd;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  text-shadow: 0 0 25px rgba(95, 240, 189, 0.45);
 }
 
-/* Navigation */
-nav{
-  display:flex;
-  gap:25px;
-  align-items:center;
+/* Growth arrow */
+.logo::after {
+  content: "↗";
+  position: absolute;
+  top: -13px;
+  right: -15px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-nav a{
-  color:#f1f5fa;
-  text-decoration:none;
-  font-size:17px;
-  transition:.3s;
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
-nav a:hover{
-  color:#5ff0bd;
-  text-shadow:0 0 12px rgba(95,240,189,.5);
+nav a {
+  position: relative;
+  color: #e7edf5;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s ease;
 }
 
-/* Sections */
-section{
-  padding:80px 7%;
-  position:relative;
+nav a:hover {
+  color: #5ff0bd;
 }
 
-section:after{
-  content:"";
-  position:absolute;
-  width:260px;
-  height:260px;
-  right:-120px;
-  top:80px;
-  border:1px solid rgba(95,240,189,.12);
-  border-radius:50%;
-  box-shadow:0 0 80px rgba(95,240,189,.05);
-  pointer-events:none;
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  background: #5ff0bd;
+  transition: 0.3s;
 }
 
-/* Hero */
-.hero{
-  min-height:calc(100vh - 80px);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:55px;
+nav a:hover::after {
+  width: 100%;
 }
 
-/* Hero Card */
-.hero-card{
-  max-width:650px;
-  width:100%;
-  margin:auto;
-  padding:55px 35px;
-  text-align:center;
-  border:1px solid rgba(95,240,189,.35);
-  border-radius:32px;
-  background:linear-gradient(
-    145deg,
-    rgba(20,39,58,.9),
-    rgba(6,17,30,.82)
-  );
-  box-shadow:
-    0 25px 80px rgba(0,0,0,.45),
-    inset 0 0 40px rgba(95,240,189,.04);
-  position:relative;
-  overflow:hidden;
+
+/* ================================
+   SECTIONS
+================================ */
+
+section {
+  position: relative;
+  padding: 80px 7%;
 }
 
-.hero-card:before{
-  content:"";
-  position:absolute;
-  width:220px;
-  height:220px;
-  background:rgba(70,240,185,.08);
-  border-radius:50%;
-  filter:blur(40px);
-  top:-80px;
-  left:50%;
-  transform:translateX(-50%);
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 70px;
 }
 
-/* HB Logo Circle */
-.circle{
-  width:220px;
-  height:220px;
-  margin:0 auto 35px;
-  border-radius:50%;
-  border:3px solid #5ff0bd;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:72px;
-  font-weight:900;
-  letter-spacing:-6px;
+
+/* ================================
+   LOGO CARD
+   FIRST
+================================ */
+
+.hero-card {
+  order: 1;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  padding: 55px 30px 50px;
+  text-align: center;
+
   background:
-    radial-gradient(circle,#10263a,#071321 70%);
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(95, 240, 189, 0.10),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(17, 38, 58, 0.96),
+      rgba(5, 17, 30, 0.96)
+    );
+
+  border: 1px solid rgba(95, 240, 189, 0.30);
+  border-radius: 32px;
+
   box-shadow:
-    0 0 35px rgba(95,240,189,.18),
-    inset 0 0 35px rgba(95,240,189,.08);
-  position:relative;
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    0 0 50px rgba(95, 240, 189, 0.06);
+
+  overflow: hidden;
 }
 
-.circle:after{
-  content:"↗";
-  position:absolute;
-  right:30px;
-  top:30px;
-  font-size:35px;
-  color:#5ff0bd;
-  letter-spacing:0;
+
+/* Decorative card glow */
+.hero-card::before {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(95, 240, 189, 0.10);
+  filter: blur(45px);
 }
 
-/* Hero title */
-.hero-card h2{
-  font-size:38px;
-  margin-bottom:18px;
-  color:#fff;
+
+/* ================================
+   STYLISH HB LOGO
+================================ */
+
+.circle {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: -7px;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #18344b,
+      #071321 72%
+    );
+
+  border: 3px solid #5ff0bd;
+
+  box-shadow:
+    0 0 20px rgba(95, 240, 189, 0.30),
+    0 0 60px rgba(95, 240, 189, 0.10),
+    inset 0 0 35px rgba(95, 240, 189, 0.08);
 }
 
-.hero-card p{
-  font-size:18px;
-  color:#b9c7d8;
+/* Logo growth arrow */
+.circle::after {
+  content: "↗";
+  position: absolute;
+  top: 25px;
+  right: 28px;
+
+  color: #5ff0bd;
+  font-size: 35px;
+  font-weight: 900;
+  letter-spacing: 0;
+
+  text-shadow: 0 0 15px rgba(95, 240, 189, 0.7);
 }
 
-/* Tags */
-.tag{
-  color:#5ff0bd;
-  font-weight:800;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:15px;
+
+/* ================================
+   BRAND TITLE
+================================ */
+
+.hero-card h2 {
+  position: relative;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 15px;
 }
 
-/* Main headings */
-h1{
-  font-size:clamp(48px,8vw,82px);
-  line-height:1.05;
-  margin-bottom:15px;
-  color:#fff;
+.hero-card h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin: 18px auto 0;
+  border-radius: 10px;
+  background: #5ff0bd;
+  box-shadow: 0 0 15px rgba(95, 240, 189, 0.5);
 }
 
-h2{
-  font-size:38px;
-  margin-bottom:18px;
+.hero-card p {
+  color: #b8c7d8;
+  font-size: 18px;
+  margin-top: 20px;
 }
 
-h3{
-  font-size:22px;
-  color:#5ff0bd;
-  margin-bottom:10px;
+
+/* ================================
+   PERSONAL INTRO
+   SECOND
+================================ */
+
+.hero > div:first-child {
+  order: 2;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 70px;
 }
 
-/* Text */
-section p{
-  color:#b9c7d8;
-  max-width:800px;
+.tag {
+  color: #5ff0bd;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
 }
 
-/* Buttons */
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 28px;
-  border-radius:50px;
-  background:linear-gradient(135deg,#5ff0bd,#28cfa0);
-  color:#041016;
-  text-decoration:none;
-  font-weight:800;
-  box-shadow:0 10px 30px rgba(50,230,170,.2);
-  transition:.3s;
+h1 {
+  font-size: clamp(48px, 8vw, 82px);
+  line-height: 1;
+  letter-spacing: -3px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 0 8px 35px rgba(0, 0, 0, 0.35);
 }
 
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 40px rgba(50,230,170,.35);
+h2 {
+  font-size: 38px;
+  color: #eaf2fa;
+  margin-bottom: 20px;
 }
 
-/* Services & Portfolio */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-  margin-top:30px;
+.hero > div:first-child h2 {
+  color: #b9c8d8;
 }
 
-article{
-  padding:28px;
-  min-height:150px;
-  border-radius:22px;
-  background:rgba(16,31,47,.72);
-  border:1px solid rgba(95,240,189,.16);
-  box-shadow:0 15px 40px rgba(0,0,0,.22);
-  transition:.3s;
+.hero > div:first-child p {
+  max-width: 720px;
+  color: #b7c6d6;
+  font-size: 19px;
+  line-height: 1.8;
 }
 
-article:hover{
-  transform:translateY(-7px);
-  border-color:rgba(95,240,189,.5);
-  box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+/* ================================
+   BUTTON
+================================ */
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 16px 34px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    #65f2bf,
+    #29cfa0
+  );
+
+  color: #031018;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 35px rgba(45, 225, 170, 0.22);
+
+  transition: all 0.3s ease;
 }
 
-/* Contact */
-#contact{
-  text-align:center;
-  padding-top:100px;
-  padding-bottom:100px;
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 45px rgba(45, 225, 170, 0.38);
 }
 
-#contact p{
-  margin-left:auto;
-  margin-right:auto;
+
+/* ================================
+   SERVICES / PORTFOLIO
+================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 35px;
 }
 
-/* Footer */
-footer{
-  padding:25px 7%;
-  text-align:center;
-  color:#8fa2b7;
-  border-top:1px solid rgba(95,240,189,.12);
-  background:rgba(3,9,18,.7);
+article {
+  position: relative;
+  padding: 30px;
+  min-height: 170px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18, 39, 58, 0.88),
+      rgba(7, 18, 31, 0.88)
+    );
+
+  border: 1px solid rgba(95, 240, 189, 0.16);
+  border-radius: 22px;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+
+  transition: 0.3s ease;
 }
 
-/* Mobile */
-@media(max-width:800px){
+article:hover {
+  transform: translateY(-7px);
+  border-color: rgba(95, 240, 189, 0.45);
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(95, 240, 189, 0.06);
+}
 
-  header{
-    padding:18px 7%;
-    flex-wrap:wrap;
-    gap:12px;
+article h3 {
+  color: #5ff0bd;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+article p {
+  color: #afbfce;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+#contact {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#contact p {
+  max-width: 700px;
+  margin: auto;
+  color: #b8c7d7;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  padding: 28px 7%;
+  text-align: center;
+  color: #8fa1b5;
+  border-top: 1px solid rgba(95, 240, 189, 0.12);
+  background: rgba(3, 9, 18, 0.75);
+}
+
+
+/* ================================
+   MOBILE DESIGN
+================================ */
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 17px 6%;
+    flex-direction: column;
+    gap: 15px;
   }
 
-  .logo{
-    font-size:32px;
+  .logo {
+    font-size: 34px;
   }
 
-  nav{
-    width:100%;
-    justify-content:space-between;
-    gap:8px;
-    overflow-x:auto;
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
   }
 
-  nav a{
-    font-size:14px;
-    white-space:nowrap;
+  nav a {
+    font-size: 14px;
+    white-space: nowrap;
   }
 
-  section{
-    padding:65px 7%;
+  section {
+    padding: 65px 7%;
   }
 
-  .hero{
-    min-height:auto;
-    padding-top:55px;
+  .hero {
+    min-height: auto;
+    padding-top: 45px;
   }
 
-  .hero-card{
-    padding:45px 20px;
-    border-radius:26px;
+  .hero-card {
+    padding: 42px 20px 40px;
+    border-radius: 28px;
   }
 
-  .circle{
-    width:190px;
-    height:190px;
-    font-size:62px;
+  .circle {
+    width: 190px;
+    height: 190px;
+    font-size: 61px;
   }
 
-  .hero-card h2{
-    font-size:30px;
+  .circle::after {
+    top: 22px;
+    right: 24px;
+    font-size: 30px;
   }
 
-  .hero-card p{
-    font-size:16px;
+  .hero-card h2 {
+    font-size: 29px;
   }
 
-  h1{
-    font-size:48px;
+  .hero-card p {
+    font-size: 16px;
   }
 
-  h2{
-    font-size:32px;
+  .hero > div:first-child {
+    margin-top: 55px;
   }
 
-  .grid{
-    grid-template-columns:1fr;
+  .tag {
+    font-size: 13px;
+    letter-spacing: 2px;
   }
 
-  article{
-    padding:24px;
+  h1 {
+    font-size: 49px;
+    letter-spacing: -2px;
+  }
+
+  h2 {
+    font-size: 31px;
+  }
+
+  .hero > div:first-child p {
+    font-size: 17px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 16px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  article {
+    min-height: auto;
   }
   }
