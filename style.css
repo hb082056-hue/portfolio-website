@@ -35,11 +35,11 @@ header {
 }
 
 .logo {
-  font-size: 34px;
-  font-weight: 900;
-  color: #55e6bd;
-  letter-spacing: -2px;
-  text-shadow: 0 0 20px rgba(85, 230, 189, 0.35);
+  .logo img {
+    width: 60px;
+    height: auto;
+    max-width: 60px;
+}
 }
 
 nav {
@@ -110,9 +110,9 @@ section::before {
 /* ===== LOGO IMAGE ===== */
 
 .hero-card .circle {
-  width: 175px !important;
-  height: 175px !important;
-  margin: 0 auto 30px;
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto 20px;
   border-radius: 50% !important;
   overflow: hidden !important;
   display: flex !important;
@@ -126,8 +126,8 @@ section::before {
 .hero-card .circle img {
   width: 100% !important;
   height: 100% !important;
-  max-width: 175px !important;
-  max-height: 175px !important;
+  max-width: 80px !important;
+  max-height: 80px !important;
   object-fit: contain !important;
   display: block !important;
 }
