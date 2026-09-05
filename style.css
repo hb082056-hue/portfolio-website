@@ -107,31 +107,31 @@ section::before {
   text-align: center;
 }
 
-/* ===== LOGO IMAGE ===== */
+/* ===== LOGO ===== */
 
 .hero-card .circle {
-  width: 80px !important;
-  height: 80px !important;
-  margin: 0 auto 20px;
-  border-radius: 50% !important;
-  overflow: hidden !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border: 3px solid #55e6bd;
-  box-shadow: 0 0 35px rgba(85, 230, 189, 0.25);
-  background: #071522;
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0 auto 30px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    border: 3px solid #55e6bd;
+    background: #071522;
+    box-sizing: border-box;
 }
 
 .hero-card .circle img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 80px !important;
-  max-height: 80px !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100px !important;
+    max-height: 100px !important;
+    object-fit: contain !important;
+    display: block !important;
+  {
 /* ===== HERO TEXT ===== */
 
 .hero-card h2 {
